@@ -1,0 +1,58 @@
+# Relatório de Testes — Persistência de Dados do Campus Hub
+
+## 1. Descrição da classe e da implementação
+
+A classe `Usuario` representa um usuário da plataforma Campus Hub e possui os atributos `id`, `nome`, `curso` e `universidade`.
+
+A persistência dos dados foi implementada em Java utilizando o ORMLite como ferramenta de mapeamento objeto-relacional e o SQLite como banco de dados. A classe `Database` é responsável pela conexão com o banco, enquanto a classe `UsuarioRepository` concentra as operações de criação, consulta, atualização e exclusão dos registros, seguindo o padrão Repository.
+
+A classe `MainTesteCRUD` executa os testes para verificar o funcionamento das operações CRUD e a persistência dos dados.
+
+## 2. Evidências das operações CRUD
+
+### 2.1 Create — Cadastro
+
+![Print do teste de cadastro](evidencias/01-create.png)
+
+**Explicação:** O teste demonstra o cadastro de um usuário no banco de dados. A mensagem de sucesso e o identificador gerado confirmam que o registro foi criado. Neste teste, o usuário cadastrado recebeu o ID 1.
+
+### 2.2 Read — Consulta
+
+![Print do teste de consulta](evidencias/02-read.png)
+
+**Explicação:** Após o cadastro, o usuário foi consultado pelo identificador e também apareceu na listagem de registros. O resultado demonstra que os dados armazenados podem ser recuperados por meio das operações de consulta.
+
+### 2.3 Update — Atualização
+
+![Print do teste de atualização](evidencias/04-update.png)
+
+**Explicação:** O teste demonstra a alteração do curso do usuário de Engenharia de Computação para Ciência da Computação. A apresentação dos dados antes e depois da operação permite verificar que o registro foi atualizado.
+
+### 2.4 Delete — Exclusão
+
+![Print do teste de exclusão](evidencias/05-delete.png)
+
+**Explicação:** Após a exclusão do usuário, uma nova consulta confirmou que o registro não existia mais. A verificação final indicou zero usuários restantes no banco de dados.
+
+## 3. Evidência de persistência dos dados
+
+![Print do teste de persistência](evidencias/03-persistencia.png)
+
+**Explicação:** Neste teste, a conexão com o banco de dados foi encerrada e aberta novamente. Em seguida, o usuário cadastrado foi recuperado com seus dados. Isso demonstra que as informações permaneceram armazenadas no arquivo `campushub.db`, mesmo após o encerramento da conexão.
+
+## 4. Resultados obtidos
+
+Os testes demonstraram o funcionamento das quatro operações CRUD:
+
+- **Create:** cadastro de um usuário.
+- **Read:** recuperação e listagem dos dados cadastrados.
+- **Update:** alteração do curso do usuário.
+- **Delete:** exclusão do registro e confirmação de sua ausência.
+
+O teste adicional de persistência demonstrou que os dados continuaram disponíveis após a reabertura da conexão com o banco de dados SQLite.
+
+## 5. Relatório complementar
+
+O relatório completo dos testes também está disponível em PDF:
+
+[Relatório de Testes — Persistência de Dados do Campus Hub](evidencias/relatorio-testes-persistencia.pdf)
