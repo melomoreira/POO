@@ -1,5 +1,7 @@
 # POO
+
 Implementação da persistência de dados da entidade Usuario do projeto Campus Hub, utilizando Java, ORMLite e SQLite, com padrão Repository e operações CRUD (Create, Read, Update e Delete).
+
 # Campus Hub — Persistência de Dados
 
 ## Sobre o projeto
@@ -20,6 +22,7 @@ Nesta etapa, foi implementada a entidade `Usuario`, responsável por representar
 - **ORMLite** — mapeamento entre objetos Java e tabelas do banco de dados.
 - **SQLite** — banco de dados relacional utilizado para armazenar os dados.
 - **JDBC** — conexão entre a aplicação Java e o banco de dados.
+- **BlueJ** — ambiente utilizado para executar e testar a aplicação.
 
 ## Entidade implementada
 
@@ -66,13 +69,62 @@ Os testes executados verificaram:
 
 Os resultados obtidos confirmaram o funcionamento das operações CRUD e a recuperação dos dados após a reabertura da conexão.
 
+## Evidências dos testes
+
+As capturas de tela abaixo devem mostrar a saída real da execução no BlueJ. Cada imagem é acompanhada de uma explicação do resultado observado.
+
+### 1. Create — Cadastro de usuário
+
+![Print do teste de cadastro](evidencias/01-create.png)
+
+**Explicação:** O teste demonstra o cadastro de um usuário no banco de dados. A aplicação apresenta uma mensagem de sucesso e o identificador gerado para o registro. Na execução realizada, o usuário recebeu o ID `1`, confirmando a criação do registro.
+
+### 2. Read — Consulta de usuário
+
+![Print do teste de consulta](evidencias/02-read.png)
+
+**Explicação:** O usuário cadastrado foi consultado pelo identificador e também apareceu na listagem de usuários. A saída da aplicação demonstra que os dados inseridos puderam ser recuperados do banco de dados.
+
+### 3. Update — Atualização de usuário
+
+![Print do teste de atualização](evidencias/04-update.png)
+
+**Explicação:** O teste demonstra a atualização do curso do usuário de Engenharia de Computação para Ciência da Computação. A aplicação apresenta os dados antes e depois da operação, confirmando a alteração do registro existente.
+
+### 4. Delete — Exclusão de usuário
+
+![Print do teste de exclusão](evidencias/05-delete.png)
+
+**Explicação:** Após a exclusão do usuário, uma nova consulta confirmou que o registro não existia mais. A verificação final apresentou zero usuários restantes, demonstrando que o registro foi removido do banco de dados.
+
+## Evidência de persistência dos dados
+
+![Print do teste de persistência](evidencias/03-persistencia.png)
+
+**Explicação:** Para verificar a persistência, a conexão com o banco de dados foi encerrada e aberta novamente. Em seguida, a aplicação recuperou o usuário cadastrado anteriormente. Esse resultado demonstra que os dados continuaram armazenados no arquivo `campushub.db`, mesmo após o encerramento da conexão.
+
 ## Banco de dados
 
 O banco de dados utilizado nesta etapa é o `campushub.db`, criado e acessado pela aplicação por meio do SQLite e do ORMLite.
 
+Durante os testes, o usuário cadastrado foi recuperado após a reabertura da conexão, teve seu curso atualizado e, posteriormente, foi excluído. A consulta final confirmou que não havia usuários restantes após a exclusão.
+
+## Relatório complementar
+
+O relatório em PDF apresenta uma descrição dos testes executados e dos resultados obtidos.
+
+[**Relatório de Testes — Persistência de Dados do Campus Hub**](evidencias/relatorio-testes-persistencia.pdf)
+
 ## Próximas etapas
 
 A persistência poderá ser expandida futuramente para outras entidades previstas no Campus Hub, como universidades, grupos, eventos, reservas, disciplinas, avaliações e documentos acadêmicos.
+
+## Referências
+
+- **ORMLite.** *ORMLite — Lightweight Object Relational Mapping for Java.* Disponível em: https://ormlite.com/.
+- **SQLite.** *SQLite — SQL Database Engine.* Disponível em: https://www.sqlite.org/.
+- **Oracle.** *Java Documentation.* Disponível em: https://docs.oracle.com/en/java/.
+- **BlueJ.** *BlueJ — The Interactive Java Environment.* Disponível em: https://www.bluej.org/.
 
 ## Observação
 
