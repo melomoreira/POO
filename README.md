@@ -71,39 +71,45 @@ Os resultados obtidos confirmaram o funcionamento das operações CRUD e a recup
 
 ## Evidências dos testes
 
-As capturas de tela abaixo devem mostrar a saída real da execução no BlueJ. Cada imagem é acompanhada de uma explicação do resultado observado.
+Esta seção reúne os arquivos utilizados para demonstrar a execução da aplicação no BlueJ e o funcionamento das operações CRUD.
 
-### 1. Create — Cadastro de usuário
+### Etapas para executar os testes no BlueJ
 
-**Explicação:** O teste demonstra o cadastro de um usuário no banco de dados. A aplicação apresenta uma mensagem de sucesso e o identificador gerado para o registro. Na execução realizada, o usuário recebeu o ID `1`, confirmando a criação do registro.
+As imagens a seguir apresentam o caminho percorrido no ambiente BlueJ para acessar e executar os testes da aplicação.
 
-### 2. Read — Consulta de usuário
+1. **Etapa 1 — Primeiro passo da execução**
 
-**Explicação:** O usuário cadastrado foi consultado pelo identificador e também apareceu na listagem de usuários. A saída da aplicação demonstra que os dados inseridos puderam ser recuperados do banco de dados.
+   [Visualizar Etapa 1](evidencias/Etapa%201.png)
 
-### 3. Update — Atualização de usuário
+2. **Etapa 2 — Continuação da execução**
 
-**Explicação:** O teste demonstra a atualização do curso do usuário de Engenharia de Computação para Ciência da Computação. A aplicação apresenta os dados antes e depois da operação, confirmando a alteração do registro existente.
+   [Visualizar Etapa 2](evidencias/Etapa%202.png)
 
-### 4. Delete — Exclusão de usuário
+3. **Etapa 3 — Acesso ao resultado dos testes**
 
-**Explicação:** Após a exclusão do usuário, uma nova consulta confirmou que o registro não existia mais. A verificação final apresentou zero usuários restantes, demonstrando que o registro foi removido do banco de dados.
+   [Visualizar Etapa 3](evidencias/Etapa%203.png)
 
-## Evidência de persistência dos dados
+### Relatório com as evidências da execução
 
-**Explicação:** Para verificar a persistência, a conexão com o banco de dados foi encerrada e aberta novamente. Em seguida, a aplicação recuperou o usuário cadastrado anteriormente. Esse resultado demonstra que os dados continuaram armazenados no arquivo `campushub.db`, mesmo após o encerramento da conexão.
+O arquivo abaixo contém o registro da execução dos testes no BlueJ, com as saídas que demonstram o funcionamento das operações implementadas.
 
-## Banco de dados
+[**Visualizar Relatório do BlueJ (PDF)**](evidencias/Relat%C3%B3rio%20do%20BlueJ.pdf)
 
-O banco de dados utilizado nesta etapa é o `campushub.db`, criado e acessado pela aplicação por meio do SQLite e do ORMLite.
+### Explicações dos testes CRUD
 
-Durante os testes, o usuário cadastrado foi recuperado após a reabertura da conexão, teve seu curso atualizado e, posteriormente, foi excluído. A consulta final confirmou que não havia usuários restantes após a exclusão.
+O documento abaixo apresenta as explicações dos resultados registrados no relatório do BlueJ, descrevendo o que foi verificado em cada operação.
 
-## Relatório complementar
+[**Visualizar Explicações dos Testes CRUD (PDF)**](evidencias/Explica%C3%A7%C3%B5es%20dos%20Testes%20CRUD.pdf)
 
-O relatório em PDF apresenta uma descrição dos testes executados e dos resultados obtidos.
+### Resultados verificados
 
-[**Relatório de Testes — Persistência de Dados do Campus Hub**](evidencias/Explicações dos Testes CRUD.pdf)
+- **Create:** cadastro de um usuário no banco de dados.
+- **Read:** consulta do usuário pelo identificador e listagem dos registros.
+- **Persistência:** recuperação dos dados após o encerramento e a reabertura da conexão com o banco de dados.
+- **Update:** alteração do curso do usuário de Engenharia de Computação para Ciência da Computação.
+- **Delete:** exclusão do usuário e confirmação de que o registro não existia mais no banco de dados.
+
+O relatório do BlueJ apresenta os resultados da execução, enquanto o documento de explicações descreve o significado de cada teste. As três imagens anteriores mostram o caminho utilizado para chegar à execução desses testes.
 
 ## Próximas etapas
 
