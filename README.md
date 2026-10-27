@@ -18,11 +18,17 @@ Nesta etapa, foi implementada a entidade `Usuario`, responsável por representar
 
 ## Tecnologias utilizadas
 
-- **Java** — linguagem de programação.
+- **Java** — linguagem de programação utilizada na implementação.
 - **ORMLite** — mapeamento entre objetos Java e tabelas do banco de dados.
 - **SQLite** — banco de dados relacional utilizado para armazenar os dados.
 - **JDBC** — conexão entre a aplicação Java e o banco de dados.
-- **BlueJ** — ambiente utilizado para executar e testar a aplicação.
+
+### Bibliotecas utilizadas
+
+As bibliotecas necessárias para executar o projeto estão disponíveis na pasta [`bibliotecas/`](bibliotecas/).
+
+- **ORMLite JDBC** — biblioteca de ORM e integração com JDBC.
+- **SQLite JDBC** — driver de conexão entre Java e SQLite.
 
 ## Entidade implementada
 
