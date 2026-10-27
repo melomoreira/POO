@@ -75,31 +75,21 @@ As capturas de tela abaixo devem mostrar a saída real da execução no BlueJ. C
 
 ### 1. Create — Cadastro de usuário
 
-![Print do teste de cadastro](evidencias/01-create.png)
-
 **Explicação:** O teste demonstra o cadastro de um usuário no banco de dados. A aplicação apresenta uma mensagem de sucesso e o identificador gerado para o registro. Na execução realizada, o usuário recebeu o ID `1`, confirmando a criação do registro.
 
 ### 2. Read — Consulta de usuário
-
-![Print do teste de consulta](evidencias/02-read.png)
 
 **Explicação:** O usuário cadastrado foi consultado pelo identificador e também apareceu na listagem de usuários. A saída da aplicação demonstra que os dados inseridos puderam ser recuperados do banco de dados.
 
 ### 3. Update — Atualização de usuário
 
-![Print do teste de atualização](evidencias/04-update.png)
-
 **Explicação:** O teste demonstra a atualização do curso do usuário de Engenharia de Computação para Ciência da Computação. A aplicação apresenta os dados antes e depois da operação, confirmando a alteração do registro existente.
 
 ### 4. Delete — Exclusão de usuário
 
-![Print do teste de exclusão](evidencias/05-delete.png)
-
 **Explicação:** Após a exclusão do usuário, uma nova consulta confirmou que o registro não existia mais. A verificação final apresentou zero usuários restantes, demonstrando que o registro foi removido do banco de dados.
 
 ## Evidência de persistência dos dados
-
-![Print do teste de persistência](evidencias/03-persistencia.png)
 
 **Explicação:** Para verificar a persistência, a conexão com o banco de dados foi encerrada e aberta novamente. Em seguida, a aplicação recuperou o usuário cadastrado anteriormente. Esse resultado demonstra que os dados continuaram armazenados no arquivo `campushub.db`, mesmo após o encerramento da conexão.
 
@@ -113,7 +103,7 @@ Durante os testes, o usuário cadastrado foi recuperado após a reabertura da co
 
 O relatório em PDF apresenta uma descrição dos testes executados e dos resultados obtidos.
 
-[**Relatório de Testes — Persistência de Dados do Campus Hub**](evidencias/relatorio-testes-persistencia.pdf)
+[**Relatório de Testes — Persistência de Dados do Campus Hub**](evidencias/Explicações dos Testes CRUD.pdf)
 
 ## Próximas etapas
 
