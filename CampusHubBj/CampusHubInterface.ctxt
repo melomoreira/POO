@@ -1,0 +1,33 @@
+#BlueJ class context
+#Mon Nov 02 11:47:42 BRT 2026
+comment0.target=CampusHubInterface
+comment0.text=\r\n Interface gr\u00E1fica (JavaFX) do Campus Hub para gerenciar a entidade Usuario.\r\n Usa Database e UsuarioRepository do projeto, com as mesmas opera\u00E7\u00F5es do\r\n MainTesteCRUD\: criar, consultarPorId, listarTodos, atualizar e excluirPorId.\r\n
+comment1.params=stage
+comment1.target=void start(javafx.stage.Stage)
+comment10.target=void buscarPorId()
+comment10.text=READ\: consulta por ID.
+comment11.target=void cadastrar()
+comment11.text=CREATE.
+comment12.target=void atualizar()
+comment12.text=UPDATE.
+comment13.target=void excluir()
+comment13.text=DELETE.
+comment14.target=void limparFormulario()
+comment15.params=mensagem
+comment15.target=void status(java.lang.String)
+comment16.params=mensagem
+comment16.target=void aviso(java.lang.String)
+comment17.params=titulo e
+comment17.target=void erro(java.lang.String, java.lang.Exception)
+comment18.params=args
+comment18.target=void main(java.lang.String[])
+comment2.target=void stop()
+comment3.target=javafx.scene.layout.VBox criarTopo()
+comment4.target=javafx.scene.layout.VBox criarCentro()
+comment5.target=javafx.scene.layout.VBox criarFormulario()
+comment6.target=javafx.scene.layout.HBox criarBarraBusca()
+comment7.target=void criarTabela()
+comment8.target=javafx.scene.layout.HBox criarRodape()
+comment9.target=void carregarTodos()
+comment9.text=READ\: lista todos.
+numComments=19

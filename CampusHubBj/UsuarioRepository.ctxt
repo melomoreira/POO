@@ -1,0 +1,15 @@
+#BlueJ class context
+#Mon Nov 02 11:42:05 BRT 2026
+comment0.target=UsuarioRepository
+comment1.params=database
+comment1.target=UsuarioRepository(Database)
+comment2.params=usuario
+comment2.target=Usuario criar(Usuario)
+comment3.params=id
+comment3.target=Usuario consultarPorId(int)
+comment4.target=java.util.List listarTodos()
+comment5.params=usuario
+comment5.target=void atualizar(Usuario)
+comment6.params=id
+comment6.target=void excluirPorId(int)
+numComments=7

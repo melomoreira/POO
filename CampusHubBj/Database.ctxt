@@ -1,0 +1,8 @@
+#BlueJ class context
+#Mon Nov 02 11:42:05 BRT 2026
+comment0.target=Database
+comment1.params=databaseName
+comment1.target=Database(java.lang.String)
+comment2.target=com.j256.ormlite.jdbc.JdbcConnectionSource getConnection()
+comment3.target=void close()
+numComments=4
