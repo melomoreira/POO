@@ -1,3 +1,5 @@
+package database;
+
 import java.sql.SQLException;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 
