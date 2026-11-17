@@ -1,3 +1,8 @@
+package repository;
+
+import model.Usuario;
+import database.Database;
+
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.table.TableUtils;
