@@ -1,3 +1,7 @@
+import model.Usuario;
+import repository.UsuarioRepository;
+import database.Database;
+
 import java.sql.SQLException;
 import java.util.List;
 
