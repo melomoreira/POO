@@ -1,1 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="UsuarioController"
+            style="-fx-background-color: #f4f6fa;">
+
+    <top>
+        <VBox spacing="5" style="-fx-background-color: #172554;">
+            <padding>
+                <Insets top="22" right="26" bottom="22" left="26"/>
+            </padding>
+            <Label text="Campus Hub"
+                   style="-fx-text-fill: white; -fx-font-size: 25px; -fx-font-weight: bold;"/>
+            <Label text="Gerenciamento de usuários universitários"
+                   style="-fx-text-fill: #cbd5e1; -fx-font-size: 13px;"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="15">
+            <padding>
+                <Insets top="24" right="26" bottom="24" left="26"/>
+            </padding>
+
+            <Label text="Usuários cadastrados"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #172554;"/>
+
+            <TableView fx:id="tabelaUsuarios" prefHeight="300"
+                       VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colunaId" text="ID" prefWidth="65"/>
+                    <TableColumn fx:id="colunaNome" text="Nome" prefWidth="230"/>
+                    <TableColumn fx:id="colunaCurso" text="Curso" prefWidth="220"/>
+                    <TableColumn fx:id="colunaUniversidade"
+                                 text="Universidade" prefWidth="220"/>
+                </columns>
+                <placeholder>
+                    <Label text="Nenhum usuário cadastrado."/>
+                </placeholder>
+            </TableView>
+
+            <HBox alignment="CENTER_RIGHT">
+                <Button text="Atualizar lista" onAction="#atualizarTabela"
+                        style="-fx-background-color: #e2e8f0; -fx-text-fill: #172554; -fx-background-radius: 7; -fx-padding: 9 16;"/>
+            </HBox>
+
+            <Separator/>
+
+            <Label text="Cadastrar novo usuário"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #172554;"/>
+
+            <GridPane hgap="12" vgap="12">
+                <columnConstraints>
+                    <ColumnConstraints minWidth="115"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                </columnConstraints>
+
+                <Label text="Nome *" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="campoNome" promptText="Digite o nome completo"
+                           GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Curso *" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="campoCurso" promptText="Ex.: Engenharia de Computação"
+                           GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Universidade *" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="campoUniversidade" promptText="Ex.: UFG"
+                           GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <HBox spacing="12" alignment="CENTER_RIGHT">
+                <Label fx:id="mensagem" text="* Todos os campos são obrigatórios."
+                       wrapText="true" HBox.hgrow="ALWAYS"
+                       style="-fx-text-fill: #475569;"/>
+                <Button fx:id="botaoCadastrar" text="Cadastrar usuário"
+                        onAction="#cadastrarUsuario"
+                        style="-fx-background-color: #2563eb; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 7; -fx-padding: 10 20;"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
