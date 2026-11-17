@@ -131,3 +131,67 @@ A persistência poderá ser expandida futuramente para outras entidades prevista
 ## Observação
 
 Esta entrega contempla a persistência da entidade `Usuario` e seus testes CRUD. Ela representa uma etapa do desenvolvimento do Campus Hub, não a implementação completa de todas as funcionalidades da plataforma.
+
+
+---
+
+# Interface gráfica JavaFX — CRUD de Usuários
+
+Esta etapa acrescenta uma interface gráfica JavaFX à entidade `Usuario`, reutilizando o ORMLite e o SQLite já implementados neste repositório.
+
+## Funcionalidades da interface
+
+- **Retrieve:** consulta todos os usuários por meio de `UsuarioRepository.listarTodos()` e apresenta os atributos ID, nome, curso e universidade em uma `TableView`.
+- **Create:** recebe nome, curso e universidade em um formulário e cadastra o usuário por meio de `UsuarioRepository.criar()`.
+- Após o cadastro, a tabela é recarregada automaticamente.
+- O botão **Atualizar lista** permite executar novamente a consulta ao banco.
+
+## Organização MVC
+
+- `src/Usuario.java` — Model: entidade persistida pelo ORMLite.
+- `src/Database.java` — conexão SQLite já existente.
+- `src/UsuarioRepository.java` — camada Repository, com operações de persistência já existentes.
+- `src/view/UsuarioView.fxml` — View: estrutura visual da interface.
+- `src/controller/UsuarioController.java` — Controller: recebe ações da interface, valida o formulário e chama o Repository.
+- `src/MainApp.java` — inicialização da aplicação JavaFX.
+
+> Os arquivos Java mantêm o pacote padrão, como no projeto original. O controlador está fisicamente na pasta `src/controller`, mas não declara `package controller`, para poder acessar `Usuario`, `Database` e `UsuarioRepository`, que também estão no pacote padrão.
+
+## Requisitos
+
+- JDK 21
+- Maven 3.9 ou superior
+- Conexão com a internet na primeira execução, para baixar as dependências
+
+## Como executar
+
+Na pasta raiz do projeto (onde está o `pom.xml`), execute:
+
+```bash
+mvn clean javafx:run
+```
+
+O arquivo `campushub.db` é criado na pasta de execução, caso ainda não exista. A aplicação usa a mesma classe `Database` e a mesma tabela `usuarios` do projeto original.
+
+## Como testar a atividade
+
+1. Inicie a aplicação com `mvn clean javafx:run`.
+2. Confira se a tabela apresenta os usuários já existentes no banco.
+3. Preencha nome, curso e universidade.
+4. Clique em **Cadastrar usuário**.
+5. Confira se o novo registro aparece na tabela.
+6. Feche a aplicação e execute novamente.
+7. Confirme que o registro continua aparecendo. Isso verifica a persistência no SQLite.
+
+## Evidências para a entrega
+
+Depois de executar os testes no seu computador, salve capturas de tela reais em `evidencias/`, por exemplo:
+
+- `evidencias/javafx-listagem.png` — tabela mostrando usuários consultados.
+- `evidencias/javafx-cadastro.png` — formulário preenchido e mensagem de cadastro bem-sucedido.
+
+As imagens ainda precisam ser capturadas após a execução local. Não foram incluídas capturas fictícias.
+
+## Observação sobre os testes antigos
+
+`MainTesteCRUD.java` foi mantido para preservar os testes de persistência da etapa anterior. A interface gráfica é iniciada pela classe `MainApp`.
