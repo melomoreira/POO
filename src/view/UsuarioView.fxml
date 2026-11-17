@@ -15,7 +15,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="UsuarioController"
+            fx:controller="controller.UsuarioController"
             style="-fx-background-color: #f4f6fa;">
 
     <top>
